@@ -22,6 +22,6 @@ class AuthInterceptor() : Interceptor {
 
     companion object {
         private const val TEMP_TOKEN =
-            "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"
+            "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"
     }
 }
