@@ -23,3 +23,5 @@ rootProject.name = "GitHub Users"
 include(":app")
 include(":core:ui")
 include(":core:data")
+include(":core:domain")
+include(":feature:userlist")
