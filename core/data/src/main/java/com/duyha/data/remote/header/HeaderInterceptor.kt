@@ -23,6 +23,6 @@ class HeaderInterceptor : Interceptor {
 
     companion object {
         private const val TEST_TOKEN =
-            "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"
+            "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"
     }
 }
