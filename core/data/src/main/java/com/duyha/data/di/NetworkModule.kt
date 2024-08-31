@@ -1,7 +1,7 @@
 package com.duyha.data.di
 
-import com.duyha.data.network.api.GithubApi
-import com.duyha.data.network.auth.AuthInterceptor
+import com.duyha.data.remote.api.GithubApi
+import com.duyha.data.remote.header.HeaderInterceptor
 import com.duyha.network.BuildConfig
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.GsonBuilder
@@ -28,19 +28,19 @@ import javax.inject.Singleton
 object NetworkModule {
 
     private const val TIMEOUT_DEFAULT = 60_000L
-    const val AUTH_INTERCEPTOR = "named:auths_intercept"
+    private const val HEADER_INTERCEPTOR = "named:header_intercept"
 
     @Provides
-    @Named(AUTH_INTERCEPTOR)
+    @Named(HEADER_INTERCEPTOR)
     fun provideAuthInterceptor(): Interceptor {
-        return AuthInterceptor()
+        return HeaderInterceptor()
     }
 
     @Provides
     @Singleton
     fun provideHttpClient(
-        @Named(AUTH_INTERCEPTOR)
-        authInterceptor: Interceptor,
+        @Named(HEADER_INTERCEPTOR)
+        headerInterceptor: Interceptor,
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .connectTimeout(TIMEOUT_DEFAULT, TimeUnit.MILLISECONDS)
@@ -53,7 +53,7 @@ object NetworkModule {
                         }
                     },
             )
-            .addInterceptor(authInterceptor)
+            .addInterceptor(headerInterceptor)
             .build()
     }
 

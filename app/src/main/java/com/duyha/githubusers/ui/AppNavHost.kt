@@ -1,9 +1,13 @@
 package com.duyha.githubusers.ui
 
+import androidx.compose.animation.ExitTransition
+import androidx.compose.animation.fadeIn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.duyha.userdetail.navigation.navigateUserDetail
+import com.duyha.userdetail.navigation.userDetailScreen
 import com.duyha.userlist.navigation.USER_LIST_ROUTE
 import com.duyha.userlist.navigation.userListScreen
 
@@ -17,8 +21,13 @@ fun AppNavHost(modifier: Modifier = Modifier) {
     NavHost(
         modifier = modifier,
         navController = navController,
-        startDestination = USER_LIST_ROUTE
+        startDestination = USER_LIST_ROUTE,
     ) {
-        userListScreen {}
+        userListScreen(
+            onUserClick = { login ->
+                navController.navigateUserDetail(login)
+            }
+        )
+        userDetailScreen()
     }
 }

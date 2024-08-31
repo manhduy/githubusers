@@ -5,9 +5,9 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import com.duyha.data.database.GitHubDatabase
-import com.duyha.data.network.api.GithubApi
-import com.duyha.data.network.model.toDbModel
+import com.duyha.data.local.GitHubDatabase
+import com.duyha.data.remote.api.GithubApi
+import com.duyha.data.remote.model.toDbModel
 import com.duyha.domain.entity.User
 import javax.inject.Inject
 

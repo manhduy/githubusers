@@ -2,8 +2,10 @@ package com.duyha.data.di
 
 import android.content.Context
 import androidx.room.Room
-import com.duyha.data.database.GitHubDatabase
-import com.duyha.data.database.dao.UserDao
+import com.duyha.data.local.GitHubDatabase
+import com.duyha.data.local.dao.UserDao
+import com.duyha.data.dispatcher.DispatcherProvider
+import com.duyha.data.dispatcher.DispatcherProviderImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,4 +35,7 @@ class DatabaseModule {
     fun provideUserDao(
         database: GitHubDatabase
     ): UserDao = database.userDao()
+
+    @Provides
+    fun provideDispatcherProvider(): DispatcherProvider = DispatcherProviderImpl()
 }

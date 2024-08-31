@@ -6,7 +6,7 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.duyha.data.database.dao.UserDao
+import com.duyha.data.local.dao.UserDao
 import com.duyha.userlist.data.local.UserPagingSource
 import com.duyha.userlist.data.remote.UserRemoteMediator
 import dagger.hilt.android.lifecycle.HiltViewModel

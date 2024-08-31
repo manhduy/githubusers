@@ -2,8 +2,8 @@ package com.duyha.userlist.data.local
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.duyha.data.network.api.GithubApi
-import com.duyha.data.network.model.toEntity
+import com.duyha.data.remote.api.GithubApi
+import com.duyha.data.remote.model.toEntity
 import com.duyha.domain.entity.User
 import javax.inject.Inject
 

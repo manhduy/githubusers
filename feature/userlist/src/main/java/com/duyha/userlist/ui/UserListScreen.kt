@@ -39,6 +39,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemKey
 import com.duyha.domain.entity.User
 import com.duyha.ui.view.ShimmerAsyncImage
+import com.duyha.ui.view.UserItemView
 
 /**
  * @author: DuyHa
@@ -85,79 +86,14 @@ fun UserListScreen(
                 item?.let {
                     UserItemView(
                         modifier = Modifier.background(Color.White),
-                        user = it,
+                        login = it.login,
+                        avatarUrl = it.avatarUrl,
+                        htmlUrl = it.htmlUrl,
                         onUserClick = onUserClick
                     )
                 }
             }
         }
         PullRefreshIndicator(refreshing.value, state, Modifier.align(Alignment.TopCenter))
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun UserItemViewPreview() {
-    UserItemView(
-        user = User(
-            id = 1,
-            login = "DuyHa",
-            avatarUrl = "",
-            htmlUrl = "",
-            location = "",
-            followers = 0,
-            following = 0
-        ),
-        onUserClick = {}
-    )
-}
-
-@Composable
-fun UserItemView(
-    modifier: Modifier = Modifier,
-    user: User,
-    onUserClick: (String) -> Unit
-) {
-    Card(modifier = modifier
-        .fillMaxWidth()
-        .padding(start = 16.dp, top = 8.dp, bottom = 8.dp, end = 16.dp)
-        .clickable { onUserClick(user.login) }
-    ) {
-        Row(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            AvatarView(user.avatarUrl)
-            Column(modifier = Modifier.padding(start = 12.dp)) {
-                Text(
-                    text = user.login,
-                    style = MaterialTheme.typography.h6
-                )
-                Divider(modifier = Modifier.padding(top = 12.dp, bottom = 12.dp))
-                Text(
-                    text = user.htmlUrl,
-                    style = MaterialTheme.typography.caption.copy(color = Color.Blue)
-                )
-            }
-        }
-    }
-
-}
-
-@Composable
-fun AvatarView(avatarUrl: String?) {
-    Box(modifier = Modifier
-        .background(
-            color = Color.Gray.copy(alpha = 0.1f),
-            shape = RoundedCornerShape(16.dp)
-        )
-        .padding(8.dp)
-    ) {
-        ShimmerAsyncImage(
-            model = avatarUrl,
-            contentDescription = "",
-            modifier = Modifier
-                .size(72.dp)
-                .clip(CircleShape)
-        )
     }
 }
