@@ -11,7 +11,7 @@ class HeaderInterceptor : Interceptor {
     private var _token: String = TEST_TOKEN
     override fun intercept(chain: Interceptor.Chain): Response {
         val newRequest = chain.request().newBuilder()
-            .addHeader("Authorization", "token $_token")
+            .addHeader("Authorization", "Bearer $_token")
             .addHeader("Content-Type", "application/json; charset=utf-8")
             .build()
         return chain.proceed(newRequest)
@@ -23,6 +23,6 @@ class HeaderInterceptor : Interceptor {
 
     companion object {
         private const val TEST_TOKEN =
-            "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"
+            "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"
     }
 }
