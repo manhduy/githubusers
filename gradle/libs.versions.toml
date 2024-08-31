@@ -21,6 +21,8 @@ androidxNavigation = "2.7.7"
 coil = "2.7.0"
 room = "2.6.1"
 lifecycleRuntimeComposeAndroid = "2.8.4"
+turbine = "1.1.0"
+mockito = "5.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -57,6 +59,8 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

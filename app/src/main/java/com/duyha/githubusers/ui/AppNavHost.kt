@@ -1,9 +1,8 @@
 package com.duyha.githubusers.ui
 
-import androidx.compose.animation.ExitTransition
-import androidx.compose.animation.fadeIn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.duyha.userdetail.navigation.navigateUserDetail
@@ -16,8 +15,10 @@ import com.duyha.userlist.navigation.userListScreen
  * @date: 29/08/2024
  */
 @Composable
-fun AppNavHost(modifier: Modifier = Modifier) {
-    val navController = rememberNavController()
+fun AppNavHost(
+    modifier: Modifier = Modifier,
+    navController: NavHostController
+) {
     NavHost(
         modifier = modifier,
         navController = navController,

@@ -85,13 +85,13 @@ fun UserDetailView(user: User) {
             .padding(top = 16.dp)) {
             FollowView(
                 modifier = Modifier.weight(1f),
-                painter = painterResource(id = R.drawable.users),
+                painter = painterResource(id = R.drawable.ic_users),
                 count = user.followers,
                 title = stringResource(id = R.string.follower)
             )
             FollowView(
                 modifier = Modifier.weight(1f),
-                painter = painterResource(id = R.drawable.medal_fill),
+                painter = painterResource(id = R.drawable.ic_medal_fill),
                 count = user.followers,
                 title = stringResource(id = R.string.following)
             )

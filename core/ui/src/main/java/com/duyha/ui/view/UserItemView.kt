@@ -1,6 +1,5 @@
 package com.duyha.ui.view
 
-import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -84,7 +83,7 @@ fun UserItemView(
                         modifier = Modifier.padding(top = 12.dp)
                     ) {
                         Icon(
-                            painter = painterResource(id = R.drawable.map_pin_fill),
+                            painter = painterResource(id = R.drawable.ic_map_pin_fill),
                             contentDescription = "",
                             tint = Color.Gray,
                             modifier = Modifier
