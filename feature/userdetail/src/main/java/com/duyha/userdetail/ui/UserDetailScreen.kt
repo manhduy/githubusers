@@ -30,10 +30,8 @@ import com.duyha.userdetail.R
 import com.duyha.utils.NumberUtils
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * User detail screen.
  */
-
 @Composable
 fun UserDetailScreen(
     viewModel: UserDetailViewModel,
@@ -73,6 +71,9 @@ fun UserDetailViewPreview() {
     )
 }
 
+/**
+ * User detail view.
+ */
 @Composable
 fun UserDetailView(user: User) {
     Column(modifier = Modifier.fillMaxWidth()) {
@@ -105,6 +106,9 @@ fun UserDetailView(user: User) {
 
 }
 
+/**
+ * Common view for follower and following.
+ */
 @Composable
 fun FollowView(
     modifier: Modifier = Modifier,
@@ -142,6 +146,9 @@ fun FollowView(
     }
 }
 
+/**
+ * Blog view.
+ */
 @Composable
 fun BlogView(
     modifier: Modifier = Modifier,

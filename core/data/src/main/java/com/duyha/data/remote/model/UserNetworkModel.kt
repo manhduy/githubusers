@@ -5,8 +5,7 @@ import com.duyha.data.local.model.UserDbModel
 import com.duyha.domain.entity.User
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * User network model.
  */
 @Keep
 data class UserNetworkModel(
@@ -19,6 +18,9 @@ data class UserNetworkModel(
     val following: Int,
 )
 
+/**
+ * Convert UserNetworkModel to User entity.
+ */
 fun UserNetworkModel.toEntity() = User(
     id = id,
     login = login,
@@ -29,6 +31,9 @@ fun UserNetworkModel.toEntity() = User(
     following = following,
 )
 
+/**
+ * Convert UserNetworkModel to UserDbModel entity.
+ */
 fun UserNetworkModel.toDbModel() = UserDbModel(
     id = id,
     login = login,

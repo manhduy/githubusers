@@ -4,8 +4,7 @@ import com.duyha.domain.entity.Result
 import com.duyha.domain.entity.User
 
 /**
- * @author: DuyHa
- * @date: 31/08/2024
+ * User detail ui state.
  */
 sealed interface UserDetailUiState {
     data class Success(val user: User) : UserDetailUiState

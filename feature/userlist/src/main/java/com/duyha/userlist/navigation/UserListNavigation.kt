@@ -10,8 +10,9 @@ import com.duyha.userlist.ui.UserListViewModel
 
 const val USER_LIST_ROUTE = "user_list_route"
 
-fun NavController.navigateUserList(navOptions: NavOptions) = navigate(USER_LIST_ROUTE, navOptions)
-
+/**
+ * Composable for user list.
+ */
 fun NavGraphBuilder.userListScreen(
     onUserClick: (String) -> Unit,
 ) {

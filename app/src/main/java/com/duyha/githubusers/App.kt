@@ -4,8 +4,7 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 /**
- * @author: DuyHa
- * @date: 29/08/2024
+ * App class for the application.
  */
 @HiltAndroidApp
 class App : Application() {

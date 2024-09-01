@@ -1,7 +1,6 @@
 package com.duyha.githubusers
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
@@ -32,6 +31,9 @@ import com.duyha.userdetail.navigation.USER_DETAIL_ROUTE
 import com.duyha.userlist.navigation.USER_LIST_ROUTE
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Main activity for the application.
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +69,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * Top app bar for the application.
+ * @param navController The navigation controller for the application.
+ */
 @Composable
 fun TopAppBar(
     navController: NavController

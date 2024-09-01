@@ -8,8 +8,7 @@ import com.duyha.data.local.dao.UserDao
 import com.duyha.data.local.model.UserDbModel
 
 /**
- * @author: DuyHa
- * @date: 30/08/2024
+ * App database.
  */
 @Database(
     version = 1,

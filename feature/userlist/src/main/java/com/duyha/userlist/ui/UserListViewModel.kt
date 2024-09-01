@@ -12,14 +12,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * User list view model.
  */
 @OptIn(ExperimentalPagingApi::class)
 @HiltViewModel
 class UserListViewModel @Inject constructor(
     private val localPagingSource: UserLocalPagingSource,
-    private val remoteMediator: UserRemoteMediator,
+    remoteMediator: UserRemoteMediator,
 ) : ViewModel() {
     val pagingFlow = Pager(
         config = PagingConfig(

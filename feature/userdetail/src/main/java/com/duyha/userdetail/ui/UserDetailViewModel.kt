@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * User detail view model.
+ * @param getUserDetailUseCase get user detail use case
  */
 @HiltViewModel
 class UserDetailViewModel @Inject constructor(
@@ -21,7 +21,10 @@ class UserDetailViewModel @Inject constructor(
     private val _userDetailUiState = MutableStateFlow<UserDetailUiState>(UserDetailUiState.Loading)
     val userDetailUiState: StateFlow<UserDetailUiState> = _userDetailUiState
 
-
+    /**
+     * Get user detail.
+     * @param login user login
+     */
     fun getUserDetail(login: String) {
         _userDetailUiState.value = UserDetailUiState.Loading
         viewModelScope.launch {

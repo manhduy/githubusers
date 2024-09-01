@@ -21,7 +21,7 @@ import javax.inject.Singleton
 
 
 /**
- * Network Module
+ * Hilt module for providing network dependencies.
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -30,12 +30,21 @@ object NetworkModule {
     private const val TIMEOUT_DEFAULT = 60_000L
     private const val HEADER_INTERCEPTOR = "named:header_intercept"
 
+    /**
+     * Provides the header interceptor.
+     * @return The header interceptor.
+     */
     @Provides
     @Named(HEADER_INTERCEPTOR)
     fun provideAuthInterceptor(): Interceptor {
         return HeaderInterceptor()
     }
 
+    /**
+     * Provides the OkHttpClient.
+     * @param headerInterceptor The header interceptor.
+     * @return The OkHttpClient.
+     */
     @Provides
     @Singleton
     fun provideHttpClient(
@@ -57,17 +66,27 @@ object NetworkModule {
             .build()
     }
 
+    /**
+     * Provides the Gson converter factory.
+     * @return The converter factory.
+     */
     @Provides
-    fun provideConverterFactory(): Converter.Factory {
+    fun provideGsonConverterFactory(): Converter.Factory {
         val gson = GsonBuilder()
             .setFieldNamingStrategy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
             .create()
         return GsonConverterFactory.create(gson)
     }
 
+    /**
+     * Provides the GitHub API.
+     * @param client The OkHttpClient.
+     * @param converter The converter factory.
+     * @return The GitHub API.
+     **/
     @Provides
     @Singleton
-    fun provideApi(
+    fun provideGitHubApi(
         client: OkHttpClient,
         converter: Converter.Factory
     ): GithubApi {

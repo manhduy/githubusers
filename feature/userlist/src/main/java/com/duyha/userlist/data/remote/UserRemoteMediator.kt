@@ -12,8 +12,7 @@ import com.duyha.domain.entity.User
 import javax.inject.Inject
 
 /**
- * @author: DuyHa
- * @date: 30/08/2024
+ * Remote mediator for user pagination.
  */
 @OptIn(ExperimentalPagingApi::class)
 class UserRemoteMediator @Inject constructor(

@@ -26,10 +26,8 @@ import coil.compose.AsyncImagePainter.Companion.DefaultTransform
 import coil.compose.AsyncImagePainter.State
 
 /**
- * @author: DuyHa
- * @date: 10/05/2024
+ * Create a shimmer effect for a composable.
  */
-
 fun Modifier.shimmer(): Modifier = composed {
     val shimmerColors = listOf(
         Color(0XFFFBFBFC).copy(alpha = 0.6f),
@@ -60,6 +58,9 @@ fun Modifier.shimmer(): Modifier = composed {
     }
 }
 
+/**
+ * Create a shimmer effect for an AsyncImage.
+ */
 @Composable
 fun ShimmerAsyncImage(
     model: Any?,

@@ -26,8 +26,7 @@ import androidx.compose.ui.unit.dp
 import com.duyha.ui.R
 
 /**
- * @author: DuyHa
- * @date: 31/08/2024
+ * Common user item view.
  */
 @Preview(showBackground = true)
 @Composable

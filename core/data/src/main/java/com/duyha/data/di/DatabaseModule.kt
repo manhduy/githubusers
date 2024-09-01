@@ -14,13 +14,17 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 /**
- * @author: DuyHa
- * @date: 30/08/2024
+ * Hilt module for providing database dependencies.
  */
 @Module
 @InstallIn(SingletonComponent::class)
 class DatabaseModule {
 
+    /**
+     * Provides the GitHub database.
+     * @param context The application context.
+     * @return The GitHub database.
+     */
     @Provides
     @Singleton
     fun providesGitHubDatabase(

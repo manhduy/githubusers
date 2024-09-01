@@ -22,10 +22,8 @@ import androidx.paging.compose.itemKey
 import com.duyha.ui.view.UserItemView
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * User list screen.
  */
-
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun UserListScreen(

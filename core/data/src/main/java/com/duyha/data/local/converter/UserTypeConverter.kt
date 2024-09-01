@@ -6,8 +6,7 @@ import com.duyha.data.local.model.toEntity
 import com.duyha.domain.entity.User
 
 /**
- * @author: DuyHa
- * @date: 31/08/2024
+ * Converter for converting UserDbModel to User.
  */
 class UserTypeConverter {
     @TypeConverter

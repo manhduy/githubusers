@@ -5,8 +5,7 @@ import androidx.room.PrimaryKey
 import com.duyha.domain.entity.User
 
 /**
- * @author: DuyHa
- * @date: 30/08/2024
+ * Data class representing a user in the database.
  */
 @Entity(tableName = "users")
 data class UserDbModel(

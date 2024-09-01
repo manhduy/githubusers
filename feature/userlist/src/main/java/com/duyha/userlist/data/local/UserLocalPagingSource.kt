@@ -4,8 +4,7 @@ import com.duyha.data.local.dao.UserDao
 import javax.inject.Inject
 
 /**
- * @author: DuyHa
- * @date: 29/08/2024
+ * Local paging source for user pagination.
  */
 class UserLocalPagingSource @Inject constructor(
     private val userDao: UserDao,

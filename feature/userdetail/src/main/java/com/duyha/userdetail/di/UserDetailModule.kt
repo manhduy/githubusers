@@ -10,8 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 /**
- * @author: DuyHa
- * @date: 31/08/2024
+ * Hilt module for user detail.
  */
 @Module
 @InstallIn(SingletonComponent::class)

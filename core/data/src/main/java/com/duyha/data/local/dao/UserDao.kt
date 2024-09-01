@@ -9,8 +9,7 @@ import com.duyha.data.local.model.UserDbModel
 import com.duyha.domain.entity.User
 
 /**
- * @author: DuyHa
- * @date: 30/08/2024
+ * User DAO interface.
  */
 @Dao
 interface UserDao {

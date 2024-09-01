@@ -12,9 +12,15 @@ import com.duyha.userdetail.ui.UserDetailViewModel
 const val USER_DETAIL_ROUTE = "user_detail_route"
 const val USER_DETAIL_LOGIN_ARG = "login"
 
+/**
+ * Navigation for user detail.
+ */
 fun NavController.navigateUserDetail(login: String) =
     navigate("$USER_DETAIL_ROUTE/$login")
 
+/**
+ * Composable for user detail.
+ */
 fun NavGraphBuilder.userDetailScreen() {
     composable(
         route = "$USER_DETAIL_ROUTE/{$USER_DETAIL_LOGIN_ARG}",

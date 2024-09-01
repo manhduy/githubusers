@@ -7,8 +7,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * @author: DuyHa
- * @date: 28/08/2024
+ * GitHub REST API.
  */
 interface GithubApi {
 

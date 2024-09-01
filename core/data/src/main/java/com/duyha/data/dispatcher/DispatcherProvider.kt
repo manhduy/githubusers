@@ -4,8 +4,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
 /**
- * @author: DuyHa
- * @date: 27/05/2024
+ * Coroutine dispatcher provider.
  */
 interface DispatcherProvider {
     fun io(): CoroutineDispatcher

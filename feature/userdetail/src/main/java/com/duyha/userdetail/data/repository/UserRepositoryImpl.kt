@@ -10,8 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 /**
- * @author: DuyHa
- * @date: 31/08/2024
+ * Implementation of [UserRepository].
  */
 class UserRepositoryImpl @Inject constructor(
     private val dispatcherProvider: DispatcherProvider,

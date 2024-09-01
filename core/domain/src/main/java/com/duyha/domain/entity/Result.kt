@@ -1,8 +1,7 @@
 package com.duyha.domain.entity
 
 /**
- * @author: DuyHa
- * @date: 23/05/2024
+ * Common state of data from repository.
  */
 sealed class Result<T> {
     data class Success<T>(
