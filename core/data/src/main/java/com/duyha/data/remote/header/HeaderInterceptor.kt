@@ -29,6 +29,6 @@ class HeaderInterceptor : Interceptor {
          * Test token for GitHub API. It will be expired in the future.
          */
         private const val TEST_TOKEN =
-            "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"
+            "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"
     }
 }
