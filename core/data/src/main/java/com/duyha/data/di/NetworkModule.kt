@@ -34,6 +34,7 @@ object NetworkModule {
      * Provides the header interceptor.
      * @return The header interceptor.
      */
+    @Singleton
     @Provides
     @Named(HEADER_INTERCEPTOR)
     fun provideAuthInterceptor(): Interceptor {
