@@ -87,4 +87,8 @@ class UserRemoteMediator @Inject constructor(
             MediatorResult.Error(e)
         }
     }
+
+    override suspend fun initialize(): InitializeAction {
+        return super.initialize()
+    }
 }

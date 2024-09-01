@@ -27,6 +27,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.duyha.domain.entity.User
 import com.duyha.ui.view.UserItemView
 import com.duyha.userdetail.R
+import com.duyha.utils.NumberUtils
 
 /**
  * @author: DuyHa
@@ -131,7 +132,7 @@ fun FollowView(
             )
         }
         Text(modifier = Modifier.padding(top = 4.dp),
-            text = count.toString(),
+            text = NumberUtils.roundNumber(count),
             style = MaterialTheme.typography.subtitle1
         )
         Text(modifier = Modifier.padding(top = 4.dp),

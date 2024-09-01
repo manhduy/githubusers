@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
 kotlin = "1.9.0"
+kotlinxCoroutines = "1.8.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -23,6 +24,8 @@ room = "2.6.1"
 lifecycleRuntimeComposeAndroid = "2.8.4"
 turbine = "1.1.0"
 mockito = "5.11.0"
+mockitoKotlin = "5.4.0"
+truth = "1.4.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +54,7 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
 paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging" }
+paging-testing = { group = "androidx.paging", name = "paging-testing", version.ref = "paging" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
@@ -61,6 +65,10 @@ androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "ro
 androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 mockito = { module = "org.mockito:mockito-core", version.ref = "mockito"}
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin"}
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
